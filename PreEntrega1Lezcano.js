@@ -1,6 +1,6 @@
 //Mi primer preentrega se va a tratar sobre una empresa que vende llaveros.//
 
-alert("Bienvenido/a, nosotros somos 'Moly Cortelaser', nos especializamos en la venta de llaveros personalizados.");
+alert ("Bienvenido/a, nosotros somos 'Moly Cortelaser', nos especializamos en la venta de llaveros personalizados.");
 
 function calcularprecio(cantidad, precioUnidad){
     return precioUnidad * cantidad;
@@ -8,9 +8,9 @@ function calcularprecio(cantidad, precioUnidad){
 
 function descuento(total){
     if (total > 20000){
-        total *= 0.80; // Aplica un 20% de descuento
+        total *= 0.80; 
     } else if (total > 5000){
-        total *= 0.90; // Aplica un 10% de descuento
+        total *= 0.90; 
     }
     return total;
 }
@@ -42,7 +42,7 @@ function personalizado(){
 function compra(){
     const precioUnidad = 350;
 
-    while (true) {
+    for (let i=0;i< 1; i++) {
         const opcion = parseInt(prompt("¿En qué podemos ayudarte?\n* Ingresa '1' si quieres un llavero.\n* Ingresa '2' si quieres dos.\n* Ingresa '3' si quieres más de dos llaveros.\n* Ingresa '4' si deseas salir."));
 
         let cantidad = 0;
