@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moly corte Laser</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Moly Corte Laser</h1>
+        <p>Nos especializamos en la venta de llaveros personalizados.</p>
+
+        <form id="form-llaveros">
+
+            <label for="cantidad">Igresa la cantidad de llaveros:</label>
+            <input type="number" id="cantidad" min="1"required>
+
+            <label for="material">Selecciona el material:</label>
+            <select id="material">
+                <option value="acrilico">Acrilico</option>
+                <option value="madera">Madera</option>
+                <option value="metal">Metal</option>
+            </select>
+
+            <label for="frase">Frase personalizada (opcional):</label>
+            <input type="text" id="frase" placeholder="Escribe tu frase aqui">
+            <label for="dije">¿Desea agregar un dije? (son de regalo)</label>
+
+            <select id="dije">
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit" id="confirmar">Confirmar</button>
+
+        </form>
+        <div id="detalles"></div>
+        <div id="total"></div>
+    </div>    
     <script src="./PreEntrega1Lezcano.js"></script>
 </body>
 </html>
