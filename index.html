@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moly corte Laser</title>
+    <title>Moly Corte Laser</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">
@@ -12,32 +13,32 @@
         <p>Nos especializamos en la venta de llaveros personalizados.</p>
 
         <form id="form-llaveros">
-
-            <label for="cantidad">Igresa la cantidad de llaveros:</label>
-            <input type="number" id="cantidad" min="1"required>
+            <label for="cantidad">Ingresa la cantidad de llaveros:</label>
+            <input type="number" id="cantidad" min="1" required>
 
             <label for="material">Selecciona el material:</label>
-            <select id="material">
-                <option value="acrilico">Acrilico</option>
+            <select id="material" required>
+                <option value="">Selecciona</option>
+                <option value="acrilico">Acrílico</option>
                 <option value="madera">Madera</option>
                 <option value="metal">Metal</option>
             </select>
 
             <label for="frase">Frase personalizada (opcional):</label>
-            <input type="text" id="frase" placeholder="Escribe tu frase aqui">
-            <label for="dije">¿Desea agregar un dije? (son de regalo)</label>
+            <input type="text" id="frase" placeholder="Escribe tu frase aquí">
 
+            <label for="dije">¿Desea agregar un dije? (son de regalo)</label>
             <select id="dije">
-                <option value="si">Si</option>
+                <option value="si">Sí</option>
                 <option value="no">No</option>
             </select>
 
             <button type="submit" id="confirmar">Confirmar</button>
-
         </form>
         <div id="detalles"></div>
         <div id="total"></div>
-    </div>    
+    </div>  
     <script src="./PreEntrega1Lezcano.js"></script>
 </body>
 </html>
+

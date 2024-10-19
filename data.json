@@ -1,0 +1,19 @@
+{
+    "llaveros": [
+        {
+            "material": "acrilico",
+            "valor": 350,
+            "stock": 1000
+        },
+        {
+            "material": "madera",
+            "valor": 300,
+            "stock": 200
+        },
+        {
+            "material": "metal",
+            "valor": 500,
+            "stock": 800
+        }
+    ]
+} 

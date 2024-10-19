@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(249, 252, 81);
     color: #333;
@@ -19,36 +19,36 @@ body{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h1{
+h1 {
     text-align: center;
     color: #305070;
 }
 
-p{
+p {
     text-align: center;
     color: black;
     margin-bottom: 20px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-label{
+label {
     font-weight: bold;
 }
 
 input, select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ddd ;
+    border: 1px solid #ddd;
     width: 100%;
 }
 
-button{
+button {
     background-color: #3498db;
     color: white;
     border: none;
@@ -57,13 +57,10 @@ button{
     margin-top: 10px;
 }
 
-button:hover{
- background-color: #2980d9;
+button:hover {
+    background-color: #2980d9;
 }
 
-
-#detalles,#total{
+#detalles, #total {
     margin-top: 20px;
-   
 }
-
