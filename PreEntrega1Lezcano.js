@@ -24,6 +24,24 @@ async function obtenerDatosDeAPI() {
     }
 }
 
+function guardarCompra(cantidad, material, frase, dije, total) {
+    const compras = JSON.parse(localStorage.getItem('compras')) || [];
+    compras.push({ cantidad, material, frase, dije, total });
+    localStorage.setItem('compras', JSON.stringify(compras));
+}
+
+function mostrarCompras() {
+    const compras = JSON.parse(localStorage.getItem('compras')) || [];
+    if (compras.length > 0) {
+        detallesDiv.innerHTML += `<h2>Compras Anteriores:</h2>`;
+        compras.forEach(compra => {
+            detallesDiv.innerHTML += `
+                <p><strong>Cantidad:</strong> ${compra.cantidad}, <strong>Material:</strong> ${compra.material}, <strong>Frase:</strong> ${compra.frase}, <strong>Dije:</strong> ${compra.dije}, <strong>Total:</strong> $${compra.total}</p>
+            `;
+        });
+    }
+}
+
 formLlavero.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -53,6 +71,8 @@ formLlavero.addEventListener('submit', async (e) => {
     
     totalDiv.innerHTML = `<p><strong>Total a pagar:</strong> $${totalConDescuento}</p>`;
 
+    guardarCompra(cantidad, material, frase, dije, totalConDescuento);
+
     Swal.fire({
         title: '¡Gracias por tu compra!',
         text: `Descuento aplicado: $${descuentoAplicado}. Total a pagar: $${totalConDescuento}`,
@@ -60,6 +80,8 @@ formLlavero.addEventListener('submit', async (e) => {
         confirmButtonText: 'Aceptar'
     });
 });
+
+mostrarCompras();
 
 function calcularPrecio(cantidad, precioUnidad) {
     return precioUnidad * cantidad;
